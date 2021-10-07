@@ -1,0 +1,13 @@
+<div class="terminal-menu">
+  <div class="terminal-button terminal-close"></div>
+  <div class="terminal-button terminal-minimize"></div>
+  <div class="terminal-button terminal-zoom"></div>
+</div>
+
+<div id="terminal" class="terminal">
+  <p>
+    <span class="prompt"> yannz@pc $ </span>
+    <span class> {{ view }} </span>
+    <span [ngClass]="{'indicator': view.length === text.length, 'invisible': view.length !== text.length}" >|</span>
+  </p>
+</div>
