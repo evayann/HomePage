@@ -9,9 +9,10 @@
     </ng-template>
     <ng-template pTemplate="content" let-event>
       <p-card [header]="event.date" [subheader]="event.status">
-        <img *ngIf="event.image" [src]="'assets/' + event.image" [alt]="event.name" width="200" class="p-shadow-2" />
+        <img *ngIf="event.image" [src]="'assets/' + event.image" [alt]="event.name" width="350" class="p-shadow-2" />
         <p [innerHTML]="event.text || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!'"></p>
-        <button pButton type="button" label="Read more" class="p-button-text"></button>
+        <button *ngIf="event.link !== undefined"
+                pButton type="button" label="Plus d'informations" class="p-button-text" (click)="openLink(event.link)"></button>
       </p-card>
     </ng-template>
   </p-timeline>

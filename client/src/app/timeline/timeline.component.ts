@@ -9,6 +9,10 @@ import {Component, Input} from "@angular/core";
 export class TimelineComponent {
   @Input() title !: string;
   @Input() events !: Array<TimelineEvent>;
+
+  openLink(link: string): void {
+    if (link) window.open(link);
+  }
 }
 
 export interface TimelineEvent {

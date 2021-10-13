@@ -16,6 +16,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/i18n/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -40,6 +46,9 @@
             "scripts": []
           },
           "configurations": {
+            "fr": {
+              "localize": ["fr"]
+            },
             "production": {
               "budgets": [
                 {
@@ -80,6 +89,9 @@
             },
             "development": {
               "browserTarget": "client:build:development"
+            },
+            "fr": {
+              "browserTarget": "client:build:fr"
             }
           },
           "defaultConfiguration": "development"
