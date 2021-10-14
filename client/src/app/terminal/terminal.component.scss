@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 
 // region Button
 .terminal-button {
@@ -12,20 +13,20 @@
 
 .terminal-close {
   left: 6px;
-  background-color: #ff3b47;
-  border-color: #9d252b;
+  background-color: $red;
+  border-color: darken($red, 50%); //#9d252b;
 }
 
 .terminal-minimize {
   left: 11px;
-  background-color: #ffc100;
-  border-color: #9d802c;
+  background-color: $orange;
+  border-color: darken($orange, 50%); //#9d802c;
 }
 
 .terminal-zoom {
   left: 16px;
-  background-color: #00d742;
-  border-color: #049931;
+  background-color: $green;
+  border-color: darken($green, 50%); //#049931;
 }
 // endregion Button
 
@@ -56,7 +57,7 @@
 }
 
 .prompt {
-  color: #4ce32a;
+  color: #8aff72;
 }
 
 .invisible {
