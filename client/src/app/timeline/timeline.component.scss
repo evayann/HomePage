@@ -8,7 +8,7 @@
 .custom-marker {
   display: flex;
   width: 5em;
-  height: 5em;
+  aspect-ratio: 1;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -17,7 +17,30 @@
   z-index: 1;
 }
 
+@media (width < 400px) {
+  .custom-marker {
+    display: flex;
+    width: 3.25em;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
 ::ng-deep {
+  .p-card-body {
+    background-color: var(--card-color);
+    color: var(--text-color);
+  }
+
+  .p-card .p-card-subtitle {
+    color: var(--text-color-second);
+  }
+
   .p-timeline-event-content,
   .p-timeline-event-opposite {
     line-height: 1.25;
@@ -44,4 +67,8 @@
       }
     }
   }
+}
+
+.shadow {
+  text-shadow: black 0 0 10px;
 }

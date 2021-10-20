@@ -37,18 +37,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
-              { "input": "src/styles/variables.scss", "inject": false },
+              "src/styles.scss",
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/primeicons/primeicons.css"
             ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            },
             "scripts": []
           },
           "configurations": {
@@ -121,14 +115,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
-              { "input": "src/styles/variables.scss", "inject": false }
+              "src/styles.scss"
             ],
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            },
             "scripts": []
           }
         }

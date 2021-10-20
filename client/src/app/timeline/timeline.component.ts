@@ -34,4 +34,5 @@ export interface TimelineEvent {
   color?: string;
   image?: string;
   text?: string;
+  preview?: boolean;
 }

@@ -100,24 +100,27 @@ export class StoryComponent {
         iconText: "5",
         color: "#ff6969",
         image: "/puniv/GreeNoble.gif",
-        text: "<b>Technologies</b> : Vuejs, D3js, Leaflet.<br/> Durant ce projet, nous avons pu réaliser une interface permettant de visualiser plus de 30 000 arbres présent sur Grenoble."
+        text: "<b>Technologies</b> : Vuejs, D3js, Leaflet.<br/> Durant ce projet, nous avons pu réaliser une interface permettant de visualiser plus de 30 000 arbres présent sur Grenoble.",
+        preview: true
       },
       {
         date: "Janvier 2021",
-        status: "Conception d'un langange informatique, le Déca",
+        status: "Conception d'un langange informatique orienté objet, le Déca",
         iconText: "5",
         color: "#3a68b7",
         image: "",
-        text: "<b>Technologies</b> : Java, Antlr, Assembleur"
+        text: "<b>Technologies</b> : Java, Antlr, Assembleur. <br/> Création d'un compilateur de programme en language Deca. Ce langage est un sous ensemble du langage Java, il possède donc seulement les fonctions principales de Java.",
+        preview: true
       },
       {
         date: "Mars 2021 - Mai 2021",
         status: "Jeux vidéo en OpenGL",
         iconText: "3",
         color: "#8aff72",
-        image: "/puniv/Projet-3D.gif",
+        image: "/puniv/3d/Projet-3D.gif",
         text: "<b>Technologies</b> : Python, OpenGL, GLFW",
-        link: "./graph3d"
+        link: "./graph3d",
+        preview: true
       },
       {
         date: "Juin 2020",
@@ -125,7 +128,8 @@ export class StoryComponent {
         iconText: "3",
         color: "#ff7cff",
         image: "/puniv/Projet-c.gif",
-        text: "<b>Technologies</b> : C, Librarie graphique similaire a SDL"
+        text: "<b>Technologies</b> : C, Librarie graphique similaire a SDL. <br/> ",
+        preview: true
       },
       {
         date: "Janvier 2019 - Mars 2019",
@@ -133,7 +137,17 @@ export class StoryComponent {
         iconText: "7",
         color: "#ffb75f",
         image: "/puniv/Robot.gif",
-        text: "<b>Technologies</b> : Python, OpenCV, Java, Web, C#, Kinect"
+        text: "<b>Technologies</b> : Python, OpenCV, Java, Web, C#, Kinect. ",
+        preview: true
+      },
+      {
+        date: "Septembre 2018 - Décembre 2018",
+        status: "Numérisation d'un jeu de carte",
+        iconText: "7",
+        color: "#ff6969",
+        image: "/puniv/Mow.gif",
+        text: "<b>Technologies</b> : Java, JavaFX, Web, React. <br/>",
+        preview: true
       },
       {
         date: "Novembre 2018 - Décembre 2018",
@@ -141,7 +155,8 @@ export class StoryComponent {
         iconText: "3",
         color: "#55f1ff",
         image: "/puniv/Trafic.gif",
-        text: "<b>Technologies</b> : Java, JavaFX"
+        text: "<b>Technologies</b> : Java, JavaFX",
+        preview: true
       }
     ]
   };
@@ -156,7 +171,8 @@ export class StoryComponent {
         icon: PrimeIcons.USER,
         color: "#836dff",
         image: "Ensimag.png",
-        text: "<b>Technologies</b> : Angular, PrimeNG. <br/>"
+        text: "<b>Technologies</b> : Angular, PrimeNG. <br/>",
+        preview: true
       },
       {
         date: "Avril - Septembre 2021",
@@ -164,31 +180,44 @@ export class StoryComponent {
         icon: PrimeIcons.EYE,
         color: "#5a99ff",
         image: "/pperso/WebArts.png",
-        text: "<b>Technologies</b> : Vuejs, P5js. <br/> Ce projet est un recueil d'effet visuel fort sympathique à l'oeil. Ce projet regroupe une cinquantaine d'effets de différents types. Tous ces effets ce base sur un canvas de p5JS onl'on dessine dans ce dernier. Ces canvas sont orchestré par VueJS pour faciliter le deploiment et la mise en place d'un nouvelle effet"
+        text: "<b>Technologies</b> : Vuejs, P5js. <br/> Ce projet est un recueil d'effet visuel fort sympathique à l'oeil. Ce projet regroupe une cinquantaine d'effets de différents types. Tous ces effets ce base sur un canvas de p5JS onl'on dessine dans ce dernier. Ces canvas sont orchestré par VueJS pour faciliter le deploiment et la mise en place d'un nouvelle effet",
+        preview: true
       },
       {
-        date: "XXX",
+        date: "Juin 2020 - Juillet 2020",
         status: "Librairie de géneration de SVG animé, SVGVideoMaker & Effets visuel",
         icon: PrimeIcons.SHIELD,
         color: "#8aff72",
         image: "/pperso/SVGVideoMaker.gif",
-        text: "<b>Technologies</b> : Python. <br/>"
+        text: "<b>Technologies</b> : Python. <br/>",
+        preview: true
       },
       {
-        date: "XXX",
+        date: "Mars 2020",
+        status: "Recreation du jeu 2048",
+        icon: "",
+        color: "",
+        image: "",
+        text: "",
+        preview: true
+      },
+      {
+        date: "Novembre 2019",
         status: "Site expliquant la programmation orientée objet",
         icon: PrimeIcons.COMPASS,
         color: "#ff6969",
         image: "/pperso/SiteOO.png",
-        text: "<b>Technologies</b> : Joomla. <br/>"
+        text: "<b>Technologies</b> : Joomla. <br/>",
+        preview: true
       },
       {
-        date: "XXX",
+        date: "Avril 2018",
         status: "Copie de Pokémon émeraude",
         icon: PrimeIcons.COMPASS,
         color: "#8aff72",
         image: "/pperso/Pokemon.png",
-        text: "<b>Technologies</b> : Java, Slick2D. <br/>"
+        text: "<b>Technologies</b> : Java, Slick2D. <br/>",
+        preview: true
       }
     ]
   };

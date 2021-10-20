@@ -1,0 +1,5 @@
+<div *ngFor="let el of elements" [ngStyle]="{'clear': (isRight() ? 'right' : 'left'), padding: '50px 0 50px 0'}">
+    <h2 [innerHTML]="el.title"></h2>
+    <img [ngStyle]="{'float': (isRightAndUpdate() ? 'left' : 'right'), width: '10rem'}" [src]="el.img" />
+    <p [innerHTML]="el.text"></p>
+</div>

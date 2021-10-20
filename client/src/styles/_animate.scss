@@ -1,0 +1,5 @@
+.animate-theme-transition, 
+.animate-theme-transition *:not(.exclude) {
+  transition: all 1.15s linear;
+  -webkit-transition: all 1.15s linear;
+}

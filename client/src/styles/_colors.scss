@@ -1,0 +1,59 @@
+// #region Background
+$background-light : white;
+$background-dark  : black;
+// #region Sky
+$cloud-light : #eee;
+$cloud-dark  : #111;
+
+$rotation-light : 0deg;
+$rotation-dark  : 180deg;
+// #endregion Sky
+// #endregion Background
+
+// #region Text
+$text-light        : black;
+$text-dark         : white;
+$text-second-light : #555;
+$text-second-dark  : #bbb;
+// #endregion Text
+
+// #region Shadow
+$shadow-light : rgba(0, 0, 0, .35);
+$shadow-dark  : rgba(255, 255, 255, .5);
+// #endregion Shadow
+
+// #region Card
+$card-light : #fafafa;
+$card-dark  : #3d3d3d;
+
+$card-border-light : #ddd;
+$card-border-dark  : #555;
+// #endregion Card 
+
+/**
+ * Colors palette
+ */
+$red    : #ff6969;
+$orange : #ffb75f;
+$yellow : #faff6d;
+$green  : #8aff72;
+$cyan   : #55f1ff;
+$blue   : #5a99ff;
+$purple : #836dff;
+$violet : #ff7cff;
+$light  : #ffffa7;
+
+$colors : (
+    --background-color: ($background-light, $background-dark),
+    --background-opposite-color: ($background-dark, $background-light),
+
+    --cloud-color: ($cloud-light, $cloud-dark),
+    
+    --text-color: ($text-light, $text-dark),
+    --text-color-second: ($text-second-light, $text-second-dark),
+
+    --shadow: ($shadow-light, $shadow-dark),
+
+    --card-color: ($card-light, $card-dark),
+    --card-border: ($card-border-light, $card-border-dark)
+)

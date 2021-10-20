@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { Graph3dComponent } from "./graph3d/graph3d.component";
+import { Graph3dComponent } from "./article/graph3d/graph3d.component";
 import { StoryComponent } from "./story/story.component";
 
 const routes: Routes = [

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { UiThemesService } from "./ui-themes.service";
 
 @Component({
   selector: "app-root",
@@ -9,4 +9,13 @@ import { Component } from "@angular/core";
 
 export class AppComponent {
 
+  constructor(private uiStyleToggleService: UiThemesService) { }
+
+  toggleTheme(): void {
+    this.uiStyleToggleService.toggle();
+  }
+
+  isDark(): boolean {
+    return this.uiStyleToggleService.isDark();
+  }
 }
