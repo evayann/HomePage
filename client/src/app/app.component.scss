@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import "../styles/colors";
 
@@ -117,6 +119,39 @@ svg#clouds {
   width: 1920px;
 }
 
-#cloud-path {
+svg#clouds > #cloud-path {
   fill: var(--cloud-color);
+}
+
+div#sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100rem;
+  height: 100rem;
+  transform: rotate(var(--rotation));
+  z-index: -20;
+}
+
+@for $i from 0 to 100 {
+  ##{star + $i} {
+    bottom: percentage(math.div(random(10000), 10000));
+    left: percentage(math.div(random(10000), 10000));
+    position: fixed;
+    animation: scaling 3s infinite;
+    width: 10px;
+    height: 10px;
+    background-image: url("../assets/star.svg");
+    background-repeat: no-repeat;
+    z-index: -20;    
+  }
+
+  @keyframes scaling {
+    0% {
+      transform: scale(1 - math.div(random(10000), 10000));
+    }
+    100% {
+      transform: scale(math.div(random(10000), 1000));
+    }    
+  }
 }

@@ -18,4 +18,8 @@ export class AppComponent {
   isDark(): boolean {
     return this.uiStyleToggleService.isDark();
   }
+
+  counter(length: number): Array<any> {  
+    return new Array(length);
+  }
 }
