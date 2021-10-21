@@ -29,6 +29,10 @@
   border-radius: 50%;
 }
 
+.theme-selector {
+  padding-top: 5px;
+}
+
 .toolbar {
   position: fixed;
   z-index: 1000;
@@ -127,31 +131,75 @@ div#sky {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100rem;
-  height: 100rem;
+  width: 100%;
+  height: 200%;
   transform: rotate(var(--rotation));
   z-index: -20;
 }
 
+div#sky > svg#sun {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 125px;
+  height: 125px;
+  z-index: -15;
+}
+
+div#sky > svg#moon {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 125px;
+  height: 125px;
+  z-index: -15;
+}
+
 @for $i from 0 to 100 {
   ##{star + $i} {
-    bottom: percentage(math.div(random(10000), 10000));
+    bottom: percentage(math.div(random(5000), 10000));
     left: percentage(math.div(random(10000), 10000));
     position: fixed;
-    animation: scaling 3s infinite;
+    animation: scaling + $i 3s infinite alternate;
     width: 10px;
     height: 10px;
     background-image: url("../assets/star.svg");
     background-repeat: no-repeat;
+    background-position: center;
     z-index: -20;    
   }
 
-  @keyframes scaling {
+  ##{cloud + $i} {
+    bottom: 50 + percentage(math.div(random(), 2));
+    left: percentage(random());
+    position: fixed;
+    animation: translating + $i 3s linear infinite alternate;
+    width: 75px;
+    height: 75px;
+    background-image:url("../assets/cloud.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -20;    
+  }
+
+  @keyframes #{scaling + $i} {
     0% {
-      transform: scale(1 - math.div(random(10000), 10000));
+      transform: scale(random());
     }
     100% {
-      transform: scale(math.div(random(10000), 1000));
+      transform: scale(2 * random());
+    }    
+  }
+
+  @keyframes #{translating + $i} {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    100% {
+      transform: translate(
+        percentage(2 + random()),
+        percentage(random() / 2 * (1 - random(1) * 2))
+        );
     }    
   }
 }
