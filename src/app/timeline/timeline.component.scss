@@ -1,0 +1,97 @@
+.title {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #ff6969;
+}
+
+.card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  padding: 10px;
+  font-family: inherit;
+  box-shadow: 3px 3px 2px var(--background-opposite-color);
+  margin-bottom: 20px;
+}
+
+.card p:nth-child(1) {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin-block-start: 0;
+}
+
+.card > h3 {
+  opacity: .75;
+}
+
+// Configure Icon element
+.custom-marker {
+  display: flex;
+  width: 5em;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (width < 400px) {
+  .custom-marker {
+    display: flex;
+    width: 3.25em;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+::ng-deep {
+  .p-component {
+    font-family: inherit;
+  }
+
+  .p-card .p-card-subtitle {
+    color: var(--text-color-second);
+  }
+
+  .p-timeline-event-content,
+  .p-timeline-event-opposite {
+    line-height: 1.25;
+  }
+
+  .p-card-content > p {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  ::ng-deep {
+    .customized-timeline {
+      .p-timeline-event:nth-child(even) {
+        flex-direction: row !important;
+
+        .p-timeline-event-content {
+          text-align: left !important;
+        }
+      }
+
+      .p-timeline-event-opposite {
+        flex: 0;
+      }
+
+      .p-card {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.shadow {
+  text-shadow: black 0 0 10px;
+}

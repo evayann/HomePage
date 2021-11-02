@@ -1,0 +1,31 @@
+.alternate {
+    display: inline-block;
+    width: 100%;
+}
+
+.alternate-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alternate-left {
+    flex-direction: row;
+}
+
+.alternate-right {
+    flex-direction: row-reverse;
+}
+
+.alternate-right div {
+    padding: 0 50px 0 0;
+}
+
+.alternate-left div {
+    padding: 0 0 0 50px;
+}
+
+.alternate-content p {
+    text-align: justify;
+    text-justify: distribute;
+}

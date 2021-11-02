@@ -1,0 +1,39 @@
+@import "./colors";
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    
+    background-image: linear-gradient(
+        45deg, 
+        var(--main-color-alt), 
+        var(--second-color-alt)
+        );
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 0 3px var(--second-color-alt);
+}
+
+a,
+a:visited {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6295c9;
+  text-decoration: underline dotted;
+}
+
+::ng-deep {
+    .p-image-preview {
+        max-width: 75vw !important;
+        max-height: 75vh !important;
+    }
+
+    .p-image-toolbar {
+        z-index: 10000;
+    }
+}

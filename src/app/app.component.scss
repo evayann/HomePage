@@ -1,0 +1,189 @@
+@use "sass:math";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import "../styles/colors";
+@import "../styles/content";
+
+:host {
+  font-family: "Nunito", -apple-system, sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.home {
+  margin: 5px 5px 0 5px;
+}
+
+.toggle-theme {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  padding: 1rem;
+  background-color: var(--background-opposite-color);
+  border-radius: 50%;
+}
+
+.theme-selector {
+  padding-top: 5px;
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 2em;
+}
+
+.toolbar img {
+  margin: 0 5px 0 0;
+}
+
+.toolbar .logo {
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px 0 5px;
+}
+
+.toggle-theme:hover,
+.toolbar .logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+.github-star-badge .material-icons {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a > p {
+  color: white;
+  padding-top: 8px;
+  margin: 0;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+svg#clouds > #cloud-path {
+  fill: var(--cloud-color);
+}
+
+div#sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  transform: rotate(var(--rotation));
+  z-index: -20;
+}
+
+div#sky > svg#sun {
+  position: fixed;
+  top: 8%;
+  right: 2%;
+  width: 125px;
+  height: 125px;
+  z-index: -15;
+}
+
+div#sky > svg#moon {
+  position: fixed;
+  bottom: 8%;
+  left: 2%;
+  width: 125px;
+  height: 125px;
+  z-index: -15;
+}
+
+$transitions: ease, linear, ease-in-out, cubic-bezier(.76,.05,.86,.06);
+
+@for $i from 0 to 100 {
+  ##{star + $i} {
+    bottom: percentage(math.div(random(5000), 10000));
+    left: percentage(math.div(random(10000), 10000));
+    position: fixed;
+    animation: scaling + $i 1.5s infinite alternate;
+    animation-timing-function: nth($transitions, random(length($transitions)));
+    width: 10px;
+    height: 10px;
+    background-image: url("../assets/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -20;    
+  }
+
+  ##{cloud + $i} {
+    bottom: 50 + percentage(math.div(random(), 2));
+    left: percentage(random());
+    position: fixed;
+    animation: translating + $i (.75 + math.div(random(), 4)) * 10s linear infinite alternate;
+    width: 75px;
+    height: 75px;
+    background-image:url("../assets/cloud.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -20;    
+  }
+
+  @keyframes #{scaling + $i} {
+    0% {
+      transform: scale(random());
+    }
+    100% {
+      transform: scale(2 * random());
+    }    
+  }
+
+  @keyframes #{translating + $i} {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    100% {
+      transform: translate(
+        percentage(2 + random()),
+        percentage(math.div(random(), 2) * (1 - random(1) * 2))
+        );
+    }    
+  }
+}

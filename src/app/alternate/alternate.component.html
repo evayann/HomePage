@@ -1,0 +1,11 @@
+<div *ngFor="let el of elements; let index = index" 
+    [ngStyle]="{'clear': ((position + index % 2) === 0 ? 'right' : 'left'), padding: '50px 0 50px 0'}"
+    class="alternate">
+    <h2 [innerHTML]="el.title"></h2>
+    <div class="alternate-content" [ngClass]="'alternate-' + ((position + index % 2) === 1 ? 'left' : 'right')">
+        <p-image width="350" [preview]="true" [src]="el.img"></p-image>
+        <div>
+            <p *ngFor="let text of el.texts" [innerHTML]="text"></p>    
+        </div>
+    </div>
+</div>

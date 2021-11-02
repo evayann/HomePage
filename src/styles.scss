@@ -1,0 +1,12 @@
+@import "./styles/colors";
+@import "./styles/themes";
+@import "./styles/animate";
+@import "./styles/content";
+@import "./styles/utilities";
+
+body {
+  padding: 2em;
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+}

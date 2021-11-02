@@ -1,0 +1,77 @@
+// #region Background
+$main-color-light: #8672f7;
+$main-color-dark : #5e4fb3; 
+
+$main-color-lighten: lighten($main-color-light, 10%);
+$main-color-darken : darken($main-color-dark, 10%); 
+
+$second-color-light: #7eadf8;
+$second-color-dark : #3579e6;
+
+$second-color-lighten: lighten($second-color-light, 10%);
+$second-color-darken : darken($second-color-dark, 10%); 
+
+$background-light : rgb(194, 187, 236);
+$background-dark  : rgb(27, 25, 31);
+// #region Sky
+$cloud-light : #eee;
+$cloud-dark  : #111;
+
+$rotation-light : 0deg;
+$rotation-dark  : 180deg;
+// #endregion Sky
+// #endregion Background
+
+// #region Text
+$text-light        : black;
+$text-dark         : white;
+$text-second-light : #555;
+$text-second-dark  : #bbb;
+// #endregion Text
+
+// #region Shadow
+$shadow-light : rgba(0, 0, 0, .35);
+$shadow-dark  : rgba(255, 255, 255, .5);
+// #endregion Shadow
+
+// #region Card
+$card-light : #fafafa;
+$card-dark  : #3d3d3d;
+
+$card-border-light : #ddd;
+$card-border-dark  : #555;
+// #endregion Card 
+
+/**
+ * Colors palette
+ */
+$red    : #ff6969;
+$orange : #ffb75f;
+$yellow : #faff6d;
+$green  : #8aff72;
+$cyan   : #55f1ff;
+$blue   : #5a99ff;
+$purple : #836dff;
+$violet : #ff7cff;
+$light  : #ffffa7;
+
+$colors : (
+    --background-color: ($background-light, $background-dark),
+    --background-opposite-color: ($background-dark, $background-light),
+
+    --cloud-color: ($cloud-light, $cloud-dark),
+    --rotation: ($rotation-light, $rotation-dark),
+
+    --text-color: ($text-light, $text-dark),
+    --text-color-second: ($text-second-light, $text-second-dark),
+
+    --shadow: ($shadow-light, $shadow-dark),
+
+    --card-color: ($card-light, $card-dark),
+    --card-border: ($card-border-light, $card-border-dark),
+
+    --main-color: ($main-color-light, $main-color-dark),
+    --main-color-alt: ($main-color-darken, $main-color-lighten),
+    --second-color: ($second-color-light, $second-color-dark),
+    --second-color-alt: ($second-color-darken, $second-color-lighten)
+)

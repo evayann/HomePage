@@ -1,0 +1,20 @@
+<p *ngIf="title" class="title"> {{ title }} </p>
+
+<p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+  <ng-template pTemplate="marker" let-event>
+    <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+      <i *ngIf="event.icon !== undefined" [ngClass]="event.icon" class="shadow"> </i>
+      <p *ngIf="event.iconText !== undefined" class="shadow"> {{ event.iconText }} </p>
+    </span>
+  </ng-template>
+  <ng-template pTemplate="content" let-event>
+      <div class="card">
+        <p> {{ event.date }} </p>
+        <h3> {{ event.status }} </h3>
+        <p-image *ngIf="event.image" [src]="'assets/' + event.image" [alt]="event.name" [preview]="event.preview" width="350" class="p-shadow-2"></p-image>
+        <p [innerHTML]="(event.technologies ? '<b>Technologies</b> : ' + event.technologies.join(', ') + '<br/><br/>' : '') + (event.summary || 'Lorem Ipsum') "></p>
+        <button *ngIf="event.link !== undefined"
+                pButton type="button" label="Plus d'informations" class="p-button-text" (click)="openLink(event.link)"></button>
+      </div>
+  </ng-template>
+</p-timeline>

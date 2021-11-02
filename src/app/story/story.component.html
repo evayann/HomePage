@@ -1,0 +1,27 @@
+<h1 i18n="main header|About me@@AboutMe" class="title"> À propos de moi </h1>
+
+<div class="card-container">
+    <button class="card card-small" [ngClass]="isSelected(studies.id)" (click)="changeTo(studies)" tabindex="0">
+        <h2>Études</h2>
+    </button>
+
+    <button class="card card-small" [ngClass]="isSelected(pro.id)" (click)="changeTo(pro)" tabindex="0">
+        <h2>Experiences professionnelles</h2>
+    </button>
+
+    <button class="card card-small" [ngClass]="isSelected(university.id)" (click)="changeTo(university)" tabindex="0">
+        <h2>Projets universitaires</h2>
+    </button>
+
+    <button class="card card-small" [ngClass]="isSelected(perso.id)" (click)="changeTo(perso)" tabindex="0">
+        <h2>Projets perso</h2>
+    </button>
+</div>
+
+<app-terminal [text]="selected.terminal" [timer]="25"></app-terminal>
+
+<app-timeline class="exclude"
+    [@fadeAnimation]="displayState"
+    (@fadeAnimation.done)="applyChange($event)"
+    [title]="selected.title" 
+    [events]="selected.timeline"></app-timeline>
