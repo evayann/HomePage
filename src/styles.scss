@@ -9,4 +9,10 @@ body {
   height: 100%;
   margin: 0;
   background-color: var(--background-color);
+
+  @media screen and (max-width: 600px) {
+    zoom: .7; 
+    -moz-transform: scale(.7); 
+    -moz-transform-origin: 0 0;
+  }
 }
